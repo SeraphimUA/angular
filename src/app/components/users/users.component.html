@@ -1,0 +1,31 @@
+<h2>My User List from Array</h2>
+<ol class="items">
+    <li *ngFor="let user of usersService.users">
+        <ul>
+            <li><label>id:</label> {{user.id}}</li>
+            <li><label>name:</label> {{user.name}}</li>
+            <li><label>username</label>: {{user.username}}</li>
+            <li><label>email</label>: {{user.email}}</li>
+        </ul>
+    </li>
+</ol>
+
+<h2>My User List from JSON Placeholder</h2>
+<ol class="items">
+    <li *ngFor="let user of usersFromJSON">
+        <ul>
+            <li><label>id</label>: {{user.id}}</li>
+            <li><label>name</label>: {{user.name}}</li>
+            <li><label>username</label>: {{user.username}}</li>
+            <li><label>email</label>: {{user.email}}</li>
+            <li><label>address</label>:
+                <ul>
+                    <li><label>street</label>: {{user.address.street}}</li>
+                    <li><label>suite</label>: {{user.address.suite}}</li>
+                    <li><label>city</label>: {{user.address.city}}</li>
+                    <li><label>zipcode</label>: {{user.address.zipcode}}</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+</ol>
